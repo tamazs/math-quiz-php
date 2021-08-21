@@ -6,9 +6,9 @@
     <title>Math quiz</title>
 </head>
 <body>
-    <form action="answer.php" id="form">
-        <p name="number1"><?php echo $random ?></p>
-        <p name="number2"><?php echo $random ?></p>
+    <form action="answer.php" method="post">
+        <p name="number1"><?php echo rand(1,100) ?></p>
+        <p name="number2"><?php echo rand(1,100); ?></p>
         <input type="number" name="number3">
         <input type="submit" name="check" value="Check"></input>
     </form>
