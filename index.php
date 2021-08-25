@@ -6,11 +6,21 @@
     <title>Math quiz</title>
 </head>
 <body>
+    <?php
+        $number1 = rand(1,100);
+        $number2 = rand(1,100);
+
+        echo "What is $number1 + $number2?"
+    ?>
+
     <form action="answer.php" method="post">
-        <p name="number1"><?php echo rand(1,100) ?></p>
-        <p name="number2"><?php echo rand(1,100); ?></p>
-        <input type="number" name="number3">
-        <input type="submit" name="check" value="Check"></input>
+        <label for="result">Result</label>
+        <input type="number" name="result">
+
+        <input type="hidden" name="number1" value="<?php echo $number1; ?>">
+        <input type="hidden" name="number2" value="<?php echo $number2; ?>">
+
+        <button type="submit">Check answer</button>
     </form>
 </body>
 </html>
